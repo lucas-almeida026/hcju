@@ -1,0 +1,19 @@
+{
+  "name": "hcju",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen": "nearleyc lib/hcju.ne -o lib/hcju.js",
+    "p": "node lib/parser.js index.hcju",
+    "g": "npm run p && node lib/generator.js index.ast"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moo": "^0.5.1",
+    "nearley": "^2.20.1"
+  }
+}
