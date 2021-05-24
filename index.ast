@@ -1,43 +1,5 @@
 {
- "head": [
-  {
-   "type": "platform_rules_statements",
-   "body": [
-    {
-     "type": "platform_rule",
-     "name": {
-      "type": "identifier",
-      "value": "mobile",
-      "text": "mobile",
-      "offset": 34,
-      "lineBreaks": 0,
-      "line": 3,
-      "col": 5
-     },
-     "between": [
-      "400",
-      "0"
-     ]
-    },
-    {
-     "type": "platform_rule",
-     "name": {
-      "type": "identifier",
-      "value": "tablet",
-      "text": "tablet",
-      "offset": 76,
-      "lineBreaks": 0,
-      "line": 4,
-      "col": 5
-     },
-     "between": [
-      "900",
-      "400"
-     ]
-    }
-   ]
-  }
- ],
+ "head": null,
  "statements": [
   {
    "type": "element_assignment",
@@ -45,27 +7,27 @@
     "type": "identifier",
     "value": "body",
     "text": "body",
-    "offset": 126,
+    "offset": 0,
     "lineBreaks": 0,
-    "line": 8,
+    "line": 1,
     "col": 1
    },
    "elementType": {
     "type": "identifier",
     "value": "div",
     "text": "div",
-    "offset": 137,
+    "offset": 11,
     "lineBreaks": 0,
-    "line": 8,
+    "line": 1,
     "col": 12
    },
    "parentElement": {
     "type": "identifier",
     "value": "window",
     "text": "window",
-    "offset": 144,
+    "offset": 18,
     "lineBreaks": 0,
-    "line": 8,
+    "line": 1,
     "col": 19
    },
    "repeat": 0
@@ -76,9 +38,9 @@
     "type": "identifier",
     "value": "body",
     "text": "body",
-    "offset": 152,
+    "offset": 26,
     "lineBreaks": 0,
-    "line": 9,
+    "line": 2,
     "col": 1
    },
    "styleGroup": {
@@ -90,9 +52,9 @@
        "type": "identifier",
        "value": "width",
        "text": "width",
-       "offset": 179,
+       "offset": 53,
        "lineBreaks": 0,
-       "line": 10,
+       "line": 3,
        "col": 3,
        "expression": "100%"
       }
@@ -103,9 +65,9 @@
        "type": "identifier",
        "value": "height",
        "text": "height",
-       "offset": 194,
+       "offset": 68,
        "lineBreaks": 0,
-       "line": 11,
+       "line": 4,
        "col": 3,
        "expression": "100vh"
       }
@@ -116,9 +78,9 @@
        "type": "identifier",
        "value": "bg",
        "text": "bg",
-       "offset": 211,
+       "offset": 85,
        "lineBreaks": 0,
-       "line": 12,
+       "line": 5,
        "col": 3,
        "expression": "gray"
       }
@@ -129,9 +91,9 @@
        "type": "identifier",
        "value": "alignment",
        "text": "alignment",
-       "offset": 223,
+       "offset": 97,
        "lineBreaks": 0,
-       "line": 13,
+       "line": 6,
        "col": 3,
        "expression": "col"
       }
@@ -145,27 +107,27 @@
     "type": "identifier",
     "value": "card",
     "text": "card",
-    "offset": 244,
+    "offset": 118,
     "lineBreaks": 0,
-    "line": 16,
+    "line": 9,
     "col": 1
    },
    "elementType": {
     "type": "identifier",
     "value": "div",
     "text": "div",
-    "offset": 255,
+    "offset": 129,
     "lineBreaks": 0,
-    "line": 16,
+    "line": 9,
     "col": 12
    },
    "parentElement": {
     "type": "identifier",
     "value": "body",
     "text": "body",
-    "offset": 262,
+    "offset": 136,
     "lineBreaks": 0,
-    "line": 16,
+    "line": 9,
     "col": 19
    },
    "repeat": 0
@@ -176,9 +138,9 @@
     "type": "identifier",
     "value": "card",
     "text": "card",
-    "offset": 268,
+    "offset": 142,
     "lineBreaks": 0,
-    "line": 17,
+    "line": 10,
     "col": 1
    },
    "styleGroup": {
@@ -190,9 +152,9 @@
        "type": "identifier",
        "value": "width",
        "text": "width",
-       "offset": 294,
+       "offset": 168,
        "lineBreaks": 0,
-       "line": 18,
+       "line": 11,
        "col": 3,
        "expression": "90%"
       }
@@ -203,9 +165,9 @@
        "type": "identifier",
        "value": "maxWidth",
        "text": "maxWidth",
-       "offset": 308,
+       "offset": 182,
        "lineBreaks": 0,
-       "line": 19,
+       "line": 12,
        "col": 3,
        "expression": "400px"
       }
@@ -216,9 +178,9 @@
        "type": "identifier",
        "value": "bg",
        "text": "bg",
-       "offset": 327,
+       "offset": 201,
        "lineBreaks": 0,
-       "line": 20,
+       "line": 13,
        "col": 3,
        "expression": "white"
       }
@@ -229,9 +191,9 @@
        "type": "identifier",
        "value": "height",
        "text": "height",
-       "offset": 340,
+       "offset": 214,
        "lineBreaks": 0,
-       "line": 21,
+       "line": 14,
        "col": 3,
        "expression": "300px"
       }
@@ -242,11 +204,11 @@
        "type": "identifier",
        "value": "alignment",
        "text": "alignment",
-       "offset": 357,
+       "offset": 231,
        "lineBreaks": 0,
-       "line": 22,
+       "line": 15,
        "col": 3,
-       "expression": "row wrap"
+       "expression": "row wrap reverse"
       }
      }
     ]
@@ -258,9 +220,9 @@
     "type": "identifier",
     "value": "cardItemStl",
     "text": "cardItemStl",
-    "offset": 384,
+    "offset": 265,
     "lineBreaks": 0,
-    "line": 25,
+    "line": 18,
     "col": 1
    },
    "body": [
@@ -270,9 +232,9 @@
       "type": "identifier",
       "value": "width",
       "text": "width",
-      "offset": 413,
+      "offset": 294,
       "lineBreaks": 0,
-      "line": 26,
+      "line": 19,
       "col": 3,
       "expression": "30px"
      }
@@ -283,9 +245,9 @@
       "type": "identifier",
       "value": "height",
       "text": "height",
-      "offset": 428,
+      "offset": 309,
       "lineBreaks": 0,
-      "line": 27,
+      "line": 20,
       "col": 3,
       "expression": "30px"
      }
@@ -296,9 +258,9 @@
       "type": "identifier",
       "value": "bg",
       "text": "bg",
-      "offset": 444,
+      "offset": 325,
       "lineBreaks": 0,
-      "line": 28,
+      "line": 21,
       "col": 3,
       "expression": "#0078aa"
      }
@@ -309,9 +271,9 @@
       "type": "identifier",
       "value": "margin",
       "text": "margin",
-      "offset": 459,
+      "offset": 340,
       "lineBreaks": 0,
-      "line": 29,
+      "line": 22,
       "col": 3,
       "expression": "10px"
      }
@@ -324,45 +286,45 @@
     "type": "identifier",
     "value": "a",
     "text": "a",
-    "offset": 478,
+    "offset": 359,
     "lineBreaks": 0,
-    "line": 32,
+    "line": 25,
     "col": 1
    },
    "elementType": {
     "type": "identifier",
     "value": "div",
     "text": "div",
-    "offset": 488,
+    "offset": 369,
     "lineBreaks": 0,
-    "line": 32,
+    "line": 25,
     "col": 11
    },
    "parentElement": {
     "type": "identifier",
     "value": "card",
     "text": "card",
-    "offset": 495,
+    "offset": 376,
     "lineBreaks": 0,
-    "line": 32,
+    "line": 25,
     "col": 18
    },
    "repeat": {
     "type": "number",
     "value": "4",
     "text": "4",
-    "offset": 486,
+    "offset": 367,
     "lineBreaks": 0,
-    "line": 32,
+    "line": 25,
     "col": 9
    },
    "styleGroup": {
     "type": "identifier",
     "value": "cardItemStl",
     "text": "cardItemStl",
-    "offset": 506,
+    "offset": 387,
     "lineBreaks": 0,
-    "line": 32,
+    "line": 25,
     "col": 29
    }
   },
@@ -372,36 +334,36 @@
     "type": "identifier",
     "value": "b",
     "text": "b",
-    "offset": 519,
+    "offset": 400,
     "lineBreaks": 0,
-    "line": 33,
+    "line": 26,
     "col": 1
    },
    "elementType": {
     "type": "identifier",
     "value": "div",
     "text": "div",
-    "offset": 529,
+    "offset": 410,
     "lineBreaks": 0,
-    "line": 33,
+    "line": 26,
     "col": 11
    },
    "parentElement": {
     "type": "identifier",
     "value": "card",
     "text": "card",
-    "offset": 536,
+    "offset": 417,
     "lineBreaks": 0,
-    "line": 33,
+    "line": 26,
     "col": 18
    },
    "repeat": {
     "type": "number",
     "value": "3",
     "text": "3",
-    "offset": 527,
+    "offset": 408,
     "lineBreaks": 0,
-    "line": 33,
+    "line": 26,
     "col": 9
    },
    "styleGroup": {
@@ -413,9 +375,9 @@
        "type": "identifier",
        "value": "width",
        "text": "width",
-       "offset": 562,
+       "offset": 443,
        "lineBreaks": 0,
-       "line": 34,
+       "line": 27,
        "col": 3,
        "expression": "30px"
       }
@@ -426,9 +388,9 @@
        "type": "identifier",
        "value": "height",
        "text": "height",
-       "offset": 577,
+       "offset": 458,
        "lineBreaks": 0,
-       "line": 35,
+       "line": 28,
        "col": 3,
        "expression": "30px"
       }
@@ -439,9 +401,9 @@
        "type": "identifier",
        "value": "borderRadius",
        "text": "borderRadius",
-       "offset": 593,
+       "offset": 474,
        "lineBreaks": 0,
-       "line": 36,
+       "line": 29,
        "col": 3,
        "expression": "50%"
       }
@@ -452,9 +414,9 @@
        "type": "identifier",
        "value": "bg",
        "text": "bg",
-       "offset": 614,
+       "offset": 495,
        "lineBreaks": 0,
-       "line": 37,
+       "line": 30,
        "col": 3,
        "expression": "green"
       }
@@ -465,9 +427,9 @@
        "type": "identifier",
        "value": "margin",
        "text": "margin",
-       "offset": 627,
+       "offset": 508,
        "lineBreaks": 0,
-       "line": 38,
+       "line": 31,
        "col": 3,
        "expression": "35px"
       }

@@ -127,17 +127,28 @@ style_assignment
     style_line_list
     -> style_line (__ml style_line):* {%  data => [data[0], ...data[1].map(e => e[1])] %}
 
-  style_line
-  -> %identifier %styleValue 
-  {% 
-    data => ({
-      type: "style_line",
-      propertie: {
-        ...data[0],
-        expression: data[1].value.replace(':', '').trim()
-      }
-    })
-  %}
+    style_line
+    -> %identifier %styleValue 
+    {% 
+      data => ({
+        type: "style_line",
+        propertie: {
+          ...data[0],
+          expression: data[1].value
+        }
+      })
+    %}
+  # style_line
+  # -> %identifier (":" __ "row" | %styleValue)
+  # {% 
+    # data => ({
+      # type: "style_line",
+      # propertie: data[0],
+      # expression: data[1]
+    # })
+  # %}
+
+  
 
 style_applyment
 -> %identifier __ "apply" __ (%identifier | style_new_instance)
@@ -172,3 +183,40 @@ _enter -> %NL:*
 __enter -> %NL:+
 _tab -> (_ %NL):* _
 __tab -> (_ %NL):+ _
+
+
+# CSS EXPRESSION DEFINITIONS
+style_expression  
+  -> alignment_expression {% id %}
+  # | simple_value {% id %}
+
+simple_value
+-> extended_valuewu | square_valuewu | %valueWithUnit
+| %hexColor
+# | predefined_color {% id %}
+
+square_valuewu
+-> %valueWithUnit __ %valueWithUnit 
+{% data => ({
+  type: "square_value_wu",
+  value: [data[0], data[2]]
+}) %}
+
+extended_valuewu
+-> %valueWithUnit __ %valueWithUnit __ %valueWithUnit __ %valueWithUnit
+{% data => ({
+  type: "extended_value_wu",
+  value: [data[0], data[2], data[4], data[6]]
+}) %}
+
+predefined_color
+-> ("white" | "black" | "gray" | "red" | "blue" | "green" | "yellow" | "orange" | "pink" | "teal" | "magenta" | "lime" | "cyan") 
+{% data => ({
+  type: "css_predefined_color",
+  value: data[0][0].value
+}) %}
+
+alignment_expression
+-> ("row" | "col" | "column") {% data => data[0][0].value %}
+
+alignment_reduced_options -> ("center" | "start" | "end") {% data => data[0][0] %}

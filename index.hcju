@@ -1,10 +1,3 @@
-HEAD{
-  def PLATFORM_RULES{
-    mobile when screen between 400 and 0
-    tablet when screen between 900 and 400
-  }
-}
-
 body = new div in window
 body apply new style { 
   width: 100%
@@ -19,7 +12,7 @@ card apply new style {
   maxWidth: 400px
   bg: white
   height: 300px
-  alignment: row wrap 
+  alignment: row wrap reverse
 }
 
 cardItemStl = new style {

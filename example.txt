@@ -1,24 +1,39 @@
-head
-  def PLATFORMS
-    tablet = when screenWidth less then 900
-    mobile = when screenWidth less then 450
-  end
-  def GLOBAL_STYLES
-    forAll = new style {
-      margin: 0,
-      padding: 0,
-    }
-    for all elements apply forAll
-    for all p elements apply new style fontFamily: 'verdana'
-  end
-end
+HEAD{
+  def PLATFORM_RULES{
+    mobile when screen between 400 and 0
+    tablet when screen between 900 and 400
+  }
+}
 
 body = new div in window
-body apply new style {
-  color: white,
-  bg: black,
-  width: 100% of parentValue max 450px,
-  in mobile overwrite {
-    width: 90% of parentValue
-  }
+body apply new style { 
+  width: 100%
+  height: 100vh
+  bg: gray
+  alignment: col
+}
+
+card = new div in body
+card apply new style {
+  width: 90%
+  maxWidth: 400px
+  bg: white
+  height: 300px
+  alignment: row wrap 
+}
+
+cardItemStl = new style {
+  width: 30px
+  height: 30px
+  bg: #0078aa
+  margin: 10px
+}
+
+a = new 4 div in card apply cardItemStl
+b = new 3 div in card apply new style {
+  width: 30px
+  height: 30px
+  borderRadius: 50%
+  bg: green
+  margin: 35px
 }
