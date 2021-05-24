@@ -1,6 +1,6 @@
 body = new div in window
 body apply new style { 
-  width: 100%
+  width: 100vw
   height: 100vh
   bg: gray
   alignment: col
@@ -8,11 +8,10 @@ body apply new style {
 
 card = new div in body
 card apply new style {
-  width: 90%
-  maxWidth: 400px
+  width: 70% max 700px min 400px
   bg: white
-  height: 300px
-  alignment: row wrap reverse
+  height: 70% max 700px min 400px
+  alignment: row center center wrap
 }
 
 cardItemStl = new style {
