@@ -90,7 +90,7 @@ event_handler
 
 # STATEMENT DEFINITIONS START
 element_assignment
--> %identifier _ "=" _ "new" (__ %number):? __ elementType __ "in" __ %identifier
+-> %identifier _ "=" _ "new" (__ %number):? __ elementType __ "in" __ %identifier (__ "[" %number "]"):?
 {%
   (data) => {
     return {
@@ -98,7 +98,8 @@ element_assignment
       elementName: data[0],
       elementType: data[7],
       parentElement: data[11],
-      repeat: data[5] ? data[5][1] : 1
+      repeat: data[5] ? data[5][1] : 1,
+      range: data[12] ? data[12][2] : ""
     }
   }
 %}

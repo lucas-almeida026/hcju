@@ -1,2 +1,3 @@
 bg = new div in window
-t = new div in bg
+t = new 5 div in bg
+g = new h1 in t [2]

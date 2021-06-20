@@ -30,7 +30,8 @@
     "line": 1,
     "col": 17
    },
-   "repeat": 1
+   "repeat": 1,
+   "range": ""
   },
   {
    "type": "element_assignment",
@@ -47,21 +48,70 @@
     "type": "identifier",
     "value": "div",
     "text": "div",
-    "offset": 32,
+    "offset": 34,
     "lineBreaks": 0,
     "line": 2,
-    "col": 9
+    "col": 11
    },
    "parentElement": {
     "type": "identifier",
     "value": "bg",
     "text": "bg",
-    "offset": 39,
+    "offset": 41,
     "lineBreaks": 0,
     "line": 2,
-    "col": 16
+    "col": 18
    },
-   "repeat": 1
+   "repeat": {
+    "type": "number",
+    "value": "5",
+    "text": "5",
+    "offset": 32,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 9
+   },
+   "range": ""
+  },
+  {
+   "type": "element_assignment",
+   "elementName": {
+    "type": "identifier",
+    "value": "g",
+    "text": "g",
+    "offset": 45,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 1
+   },
+   "elementType": {
+    "type": "identifier",
+    "value": "h1",
+    "text": "h1",
+    "offset": 53,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 9
+   },
+   "parentElement": {
+    "type": "identifier",
+    "value": "t",
+    "text": "t",
+    "offset": 59,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 15
+   },
+   "repeat": 1,
+   "range": {
+    "type": "number",
+    "value": "2",
+    "text": "2",
+    "offset": 62,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 18
+   }
   }
  ]
 }
