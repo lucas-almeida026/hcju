@@ -116,13 +116,21 @@ element_assignment
 %}
 
 range
--> "[" _ static_position_list _ "]" {% data => data[2] %}
+-> "[" _ position_list _ "]" {% data => data[2] %}
 
-static_position
--> %number {% data => data[0].value.toString() %}
+position
+-> (%number | %number _ "-" _ %number) 
+{% 
+  data => {
+    if(data[0].length === 0) return data[0].filter(e => !e.forEach).map(e => e.value)
+    return data[0].filter(e => !e.forEach).join('')
+  }
+%}
 
-static_position_list
--> static_position (_ "," _ static_position):* {% data => [data[0], ...data[1].map(e => e[3])].join(',') %}
+position_list
+-> position (_ "," _ position):* {% data => {
+  return [data[0], ...data[1].map(e => e[3])].join(',')
+} %}
 
 
 element_write_text
