@@ -90,7 +90,7 @@ event_handler
 
 # STATEMENT DEFINITIONS START
 element_assignment
--> %identifier _ "=" _ "new" (__ %number):? __ elementType __ "in" __ %identifier (__ "[" %number "]"):?
+-> %identifier _ "=" _ "new" (__ %number):? __ elementType __ "in" __ %identifier (__ range):?
 {%
   (data) => {
     return {
@@ -99,7 +99,7 @@ element_assignment
       elementType: data[7],
       parentElement: data[11],
       repeat: data[5] ? data[5][1] : 1,
-      range: data[12] ? data[12][2] : ""
+      range: data[12] ? data[12][1] : ""
     }
   }
 %}
@@ -114,6 +114,15 @@ element_assignment
     styleGroup: data[15][0]
   })
 %}
+
+range
+-> "[" _ static_position_list _ "]" {% data => data[2] %}
+
+static_position
+-> %number {% data => data[0].value.toString() %}
+
+static_position_list
+-> static_position (_ "," _ static_position):* {% data => [data[0], ...data[1].map(e => e[3])].join(',') %}
 
 
 element_write_text

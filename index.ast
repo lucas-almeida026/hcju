@@ -103,15 +103,7 @@
     "col": 15
    },
    "repeat": 1,
-   "range": {
-    "type": "number",
-    "value": "2",
-    "text": "2",
-    "offset": 62,
-    "lineBreaks": 0,
-    "line": 3,
-    "col": 18
-   }
+   "range": "0,2,4"
   }
  ]
 }
