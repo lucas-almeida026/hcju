@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run serve",
+    "serve": "nodemon server.js",
+    "serve-o": "explorer \"http://localhos:8000\" && nodemon server.js",
     "gen": "nearleyc lib/hcju.ne -o lib/hcju.js",
     "p": "node lib/parser.js index.hcju",
     "g": "npm run p && node lib/generator.js index.ast"

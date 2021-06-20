@@ -11,6 +11,10 @@ app.get('/index.js', (req, res) => {
   res.sendFile(__dirname + '/index.js')
 })
 
+app.get('/runtime.js', (req, res) => {
+  res.sendFile(__dirname + '/runtime.js')
+})
+
 app.get('/lib/intermadiator.js', (req, res) => {
   res.sendFile(__dirname + '/lib/intermadiator.js')
 })

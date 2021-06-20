@@ -1,19 +1,10 @@
 import myLib from './lib/intermadiator.js'
 const $elementStyles = []
-window.addEventListener('resize', () => $elementStyles.forEach(fn => fn()))
+const applyConditionalStyles = () => {if($elementStyles.length > 0)$elementStyles.forEach(e => e.conditionalStyles.length > 0?(e.conditionalStyles.forEach(s => {myLib.getState()[`$${s.conditionalKey}`]?eval(s.conditionalFunction):eval(e.styleFunction)})):eval(e.styleFunction))}
+window.addEventListener('resize', () => {applyConditionalStyles()})
 const $references=[]
-const body=myLib.createElement('div',document.body, NaN)
-$references.push({name:'body',ref:body})
-myLib.applyStyleGroupInElement(body,myLib.createStyleGroup('width:100vw;height:100vh;bg:gray;alignment:col',$references))
-$elementStyles.push(() => myLib.applyStyleGroupInElement(body,myLib.createStyleGroup('width:100vw;height:100vh;bg:gray;alignment:col',$references)))
-const card=myLib.createElement('div',body,NaN)
-$references.push({name:'card',ref:card})
-myLib.applyStyleGroupInElement(card,myLib.createStyleGroup('width:70% max 700px min 400px;bg:white;height:70% max 700px min 400px;alignment:row center center wrap',$references))
-$elementStyles.push(() => myLib.applyStyleGroupInElement(card,myLib.createStyleGroup('width:70% max 700px min 400px;bg:white;height:70% max 700px min 400px;alignment:row center center wrap',$references)))
-const cardItemStl=myLib.createStyleGroup('width:30px;height:30px;bg:#0078aa;margin:10px')
-const a=myLib.createElement('div',card,4)
-myLib.applyStyleGroupInElement(a,cardItemStl)
-$references.push({name:'a',ref:a})
-const b=myLib.createElement('div',card,3)
-myLib.applyStyleGroupInElement(b,myLib.createStyleGroup('width:30px;height:30px;borderRadius:50%;bg:green;margin:35px',$references))
-$references.push({name:'b',ref:b})
+const bg=myLib.createElement('div',document.body, 1)
+$references.push({name:'bg',ref:bg})
+const t=myLib.createElement('div',bg,1)
+$references.push({name:'t',ref:t})
+applyConditionalStyles()

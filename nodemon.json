@@ -1,3 +1,6 @@
 {
-  "ignore": ["index.js"]
+  "ignore": ["index.js"],
+  "execMap": {
+    "ne": "npm run gen"
+  }
 }

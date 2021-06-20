@@ -37,3 +37,30 @@ b = new 3 div in card apply new style {
   bg: green
   margin: 35px
 }
+
+HEAD{
+  def PLATFORM_RULES{
+    mobile when screen between 0 and 400
+  }
+}
+
+bg = new div in window
+bg apply new style {
+  width: 100%
+  height: 100% of window
+  bg: #888
+  alignment: col
+}
+
+card = new div in bg
+card apply new style {
+  shape: circle 6rem
+  bg: white
+  in mobile overwrite {
+    bg: red
+  }
+}
+
+on click in card execute new jsFunction () {$
+  console.log($event)
+$}
